@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nikfen.healthkeeper">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:debuggable="false"
+        android:theme="@style/AppTheme"
+        tools:ignore="HardcodedDebugMode">
+        <activity android:name="com.nikfen.healthkeeper.NotificationActivity" />
+        <activity android:name="com.nikfen.healthkeeper.SettingsActivity" />
+        <activity
+            android:name="com.nikfen.healthkeeper.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.nikfen.healthkeeper.RegistDataActivity" />
+        <activity
+            android:name="com.nikfen.healthkeeper.FirstOpenActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.nikfen.healthkeeper.AlarmReciver" />
+    </application>
+
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+</manifest>
